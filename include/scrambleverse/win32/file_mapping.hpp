@@ -29,6 +29,13 @@ namespace scrambleverse::win32
             size_t maximumSize,
             LPCSTR lpName);
 
+        static FileMapping Create(
+            HANDLE hFile,
+            LPSECURITY_ATTRIBUTES lpFileMappingAttributes,
+            DWORD flProtect,
+            size_t maximumSize,
+            std::nullptr_t lpName);
+
         static FileMapping Open(
             DWORD dwDesiredAccess,
             BOOL bInheritHandle,
@@ -38,6 +45,11 @@ namespace scrambleverse::win32
             DWORD dwDesiredAccess,
             BOOL bInheritHandle,
             LPCSTR lpName);
+
+        static FileMapping Open(
+            DWORD dwDesiredAccess,
+            BOOL bInheritHandle,
+            std::nullptr_t lpName);
 
         ViewOfFile MapView(
             DWORD dwDesiredAccess,

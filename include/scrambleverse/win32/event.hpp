@@ -24,5 +24,11 @@ namespace scrambleverse::win32
             BOOL bManualReset,
             BOOL bInitialState,
             LPCSTR lpName);
+
+        static Event Create(
+            LPSECURITY_ATTRIBUTES lpEventAttributes,
+            BOOL bManualReset,
+            BOOL bInitialState,
+            std::nullptr_t lpName);
     };
 }

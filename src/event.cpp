@@ -43,3 +43,12 @@ Event Event::Create(
     }
     return Event(handle);
 }
+
+Event Event::Create(
+    LPSECURITY_ATTRIBUTES lpEventAttributes,
+    BOOL bManualReset,
+    BOOL bInitialState,
+    std::nullptr_t lpName)
+{
+    return Create(lpEventAttributes, bManualReset, bInitialState, static_cast<LPCWSTR>(lpName));
+}

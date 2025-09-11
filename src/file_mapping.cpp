@@ -56,6 +56,16 @@ FileMapping FileMapping::Create(
     return FileMapping(hMapFile);
 }
 
+FileMapping FileMapping::Create(
+    HANDLE hFile,
+    LPSECURITY_ATTRIBUTES lpFileMappingAttributes,
+    DWORD flProtect,
+    size_t maximumSize,
+    std::nullptr_t lpName)
+{
+    return Create(hFile, lpFileMappingAttributes, flProtect, maximumSize, static_cast<LPCWSTR>(lpName));
+}
+
 FileMapping FileMapping::Open(
     DWORD dwDesiredAccess,
     BOOL bInheritHandle,
@@ -92,6 +102,14 @@ FileMapping FileMapping::Open(
     }
 
     return FileMapping(hMapFile);
+}
+
+FileMapping FileMapping::Open(
+    DWORD dwDesiredAccess,
+    BOOL bInheritHandle,
+    std::nullptr_t lpName)
+{
+    return Open(dwDesiredAccess, bInheritHandle, static_cast<LPCWSTR>(lpName));
 }
 
 ViewOfFile FileMapping::MapView(
