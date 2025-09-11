@@ -118,7 +118,7 @@ ViewOfFile FileMapping::MapView(
     SIZE_T dwNumberOfBytesToMap)
 {
     return ViewOfFile::Map(
-        this,
+        this->get(),
         dwDesiredAccess,
         offset,
         dwNumberOfBytesToMap);
