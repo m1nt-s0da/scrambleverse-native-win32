@@ -12,7 +12,7 @@ void internal::DeleteHandle(HANDLE h)
 }
 
 Handle::Handle() noexcept = default;
-Handle::Handle(HANDLE handle) noexcept : HandleBase(handle) {}
+Handle::Handle(HANDLE handle, bool auto_close) noexcept : HandleBase(handle, auto_close) {}
 
 bool Handle::GetHandleInformation(DWORD *lpdwFlags) const noexcept
 {

@@ -17,8 +17,7 @@ namespace scrambleverse::win32
     {
     public:
         Handle() noexcept;
-        explicit Handle(HANDLE handle) noexcept;
-
+        explicit Handle(HANDLE handle, bool auto_close = true) noexcept;
 
         bool GetHandleInformation(DWORD *lpdwFlags) const noexcept;
 

@@ -14,7 +14,7 @@ void internal::UnmapViewOfFile(LPVOID lpBaseAddress)
 
 ViewOfFile::ViewOfFile() noexcept = default;
 
-ViewOfFile::ViewOfFile(LPVOID ptr) noexcept : HandleBase(ptr) {}
+ViewOfFile::ViewOfFile(LPVOID ptr, bool auto_close) noexcept : HandleBase(ptr, auto_close) {}
 
 ViewOfFile ViewOfFile::Map(
     HANDLE hFileMappingObject,

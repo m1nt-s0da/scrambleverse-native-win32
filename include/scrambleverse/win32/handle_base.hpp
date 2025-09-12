@@ -12,16 +12,24 @@ namespace scrambleverse::win32
     private:
         struct Deleter
         {
+            bool auto_delete;
+
+            Deleter(bool auto_delete) : auto_delete(auto_delete) {}
+
             void operator()(T handle) const noexcept
             {
-                deleter(handle);
+                if (auto_delete && handle != invalid)
+                {
+                    deleter(handle);
+                }
             }
         };
+
         std::shared_ptr<std::remove_pointer_t<T>> ptr;
 
     public:
-        HandleBase() : ptr(invalid, Deleter{}) {}
-        explicit HandleBase(T handle) : ptr(handle, Deleter{}) {}
+        HandleBase() : ptr(invalid, Deleter(false)) {}
+        explicit HandleBase(T handle, bool auto_delete = true) : ptr(handle, Deleter(auto_delete)) {}
 
         // コピー／代入
         HandleBase(const HandleBase &) = default;

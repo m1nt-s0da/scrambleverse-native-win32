@@ -17,7 +17,7 @@ namespace scrambleverse::win32
     {
     public:
         ViewOfFile() noexcept;
-        explicit ViewOfFile(LPVOID ptr) noexcept;
+        explicit ViewOfFile(LPVOID ptr, bool auto_close = true) noexcept;
 
         static ViewOfFile Map(
             HANDLE hFileMappingObject,
