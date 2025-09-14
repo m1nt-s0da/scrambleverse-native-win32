@@ -1,7 +1,7 @@
 #include <windows.h>
 
-#include "process.hpp"
-#include "error.hpp"
+#include "scrambleverse/win32/process.hpp"
+#include "scrambleverse/win32/error.hpp"
 
 using namespace scrambleverse::win32;
 

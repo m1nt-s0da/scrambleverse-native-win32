@@ -1,6 +1,6 @@
-#include "file_mapping.hpp"
-#include "view_of_file.hpp"
-#include "error.hpp"
+#include "scrambleverse/win32/file_mapping.hpp"
+#include "scrambleverse/win32/view_of_file.hpp"
+#include "scrambleverse/win32/error.hpp"
 #include "macros.h"
 
 using namespace scrambleverse::win32;

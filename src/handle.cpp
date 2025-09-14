@@ -1,5 +1,5 @@
-#include "handle.hpp"
-#include "process.hpp"
+#include "scrambleverse/win32/handle.hpp"
+#include "scrambleverse/win32/process.hpp"
 
 using namespace scrambleverse::win32;
 

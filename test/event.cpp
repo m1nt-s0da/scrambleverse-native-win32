@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <Windows.h>
 
-#include "event.hpp"
+#include "scrambleverse/win32/event.hpp"
 
 using namespace scrambleverse::win32;
 

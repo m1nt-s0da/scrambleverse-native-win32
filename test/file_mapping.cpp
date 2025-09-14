@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <Windows.h>
 
-#include "file_mapping.hpp"
-#include "error.hpp"
-#include "view_of_file.hpp"
+#include "scrambleverse/win32/file_mapping.hpp"
+#include "scrambleverse/win32/error.hpp"
+#include "scrambleverse/win32/view_of_file.hpp"
 
 using namespace scrambleverse::win32;
 

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <Windows.h>
 
-#include "error.hpp"
+#include "scrambleverse/win32/error.hpp"
 
 TEST(Win32ErrorTest, Throw)
 {

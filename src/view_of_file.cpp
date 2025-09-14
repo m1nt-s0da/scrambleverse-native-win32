@@ -1,5 +1,5 @@
-#include "error.hpp"
-#include "view_of_file.hpp"
+#include "scrambleverse/win32/error.hpp"
+#include "scrambleverse/win32/view_of_file.hpp"
 #include "macros.h"
 
 using namespace scrambleverse::win32;

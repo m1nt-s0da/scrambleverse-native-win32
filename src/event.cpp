@@ -1,5 +1,5 @@
-#include "event.hpp"
-#include "error.hpp"
+#include "scrambleverse/win32/event.hpp"
+#include "scrambleverse/win32/error.hpp"
 
 using namespace scrambleverse::win32;
 
