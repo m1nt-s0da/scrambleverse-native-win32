@@ -5,6 +5,8 @@
 #include "scrambleverse/win32/wide_char.hpp"
 #include "scrambleverse/win32/error.hpp"
 
+using namespace scrambleverse::win32;
+
 std::wstring scrambleverse::win32::u8_to_wide(const char8_t *u8str, size_t u8str_len)
 {
     if (u8str == nullptr || u8str_len == 0)
